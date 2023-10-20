@@ -53,8 +53,12 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "--f /Users/mayong/Desktop/tr.strings"
+            argument = "--ps /Users/mayong/Desktop/Localizable.plist --output /Users/mayong/Desktop"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--sp /Users/mayong/Desktop/cache/en.lproj /Users/mayong/Desktop/cache/ar.lproj /Users/mayong/Desktop/cache/tr.lproj --output /Users/mayong/Desktop/Localizable.plist --ido"
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>
