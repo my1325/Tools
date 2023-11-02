@@ -9,7 +9,7 @@ import Commander
 import CryptoSwift
 import FilePath
 import Foundation
-import CoreXLSX
+import ZipArchive
 
 let arguments = CommandLine.arguments
 
@@ -17,6 +17,11 @@ let key = "asjdlfjasdlkfaqw"
 let iv = "alsjflkasdjflkaq"
 
 let aes = try AESCoder(key: key, iv: iv)
+
+let newKey = "qwertyasdf123456"
+let newIV = "mnbvcxzlkjhyuiop"
+
+let newAes = try AESCoder(key: newKey, iv: newIV)
 
 // MARK: -  encrypt strings
 func save(_ content: String, toNewPath newPath: FilePath? = nil, relativePath: FilePath) throws {
@@ -64,11 +69,7 @@ func handleStringsFile(_ filePath: [DirectoryPath], toPlist newPath: FilePath, i
                 continue
             }
             let cache = try handleStringLines(filePath, isDocumentOrigin: isDocumentOrigin, includePrefix: includePrefix)
-            for (key, values) in cache {
-                var keyCache = retCache[pathName] ?? [:]
-                keyCache[key] = values
-                retCache[pathName] = keyCache
-            }
+            retCache[pathName] = cache
         }
     }
     try newPath.createIfNotExists()
@@ -113,8 +114,8 @@ func handleStringLines(_ filePath: FilePath, isDocumentOrigin: Bool, includePref
 }
 
 // MARK: - Plist To Strings
-func handlePlistToStrings(_ plist: FilePath, name: String, output: DirectoryPath, includePrefix: String) throws {
-    let retCache: [String: String] = try handlePlist(plist, includePrefix: includePrefix)
+func handlePlistToStrings(_ plist: FilePath, name: String, output: DirectoryPath, includePrefix: String, replacePrefix: String) throws {
+    let retCache: [String: String] = try handlePlist(plist, includePrefix: includePrefix, replacePrefix: replacePrefix)
     for (key, value) in retCache {
         let keyDir = output.appendConponent(String(format: "%@.lproj", key))
         try keyDir.createIfNotExists()
@@ -126,7 +127,7 @@ func handlePlistToStrings(_ plist: FilePath, name: String, output: DirectoryPath
     }
 }
 
-func handlePlist(_ plist: FilePath, includePrefix: String) throws -> [String: String] {
+func handlePlist(_ plist: FilePath, includePrefix: String, replacePrefix: String) throws -> [String: String] {
     var retValue: [String: [String]] = [:]
     let data = try plist.readData()
     let decoder = PropertyListDecoder()
@@ -136,7 +137,11 @@ func handlePlist(_ plist: FilePath, includePrefix: String) throws -> [String: St
             var strings: [String] = Array(repeating: "", count: 2)
             strings[0] = String(format: "// \"%@\" = \"%@\";", key, value)
             if key.hasPrefix(includePrefix) {
-                strings[1] = String(format: "\"%@\" = \"%@\";", key, try aes.encrypt(value))
+                let replaceRange = key.startIndex ..< key.index(key.startIndex, offsetBy: includePrefix.count)
+                var newKey = key
+                newKey.removeSubrange(replaceRange)
+                newKey = String(format: "%@%@", replacePrefix, newKey)
+                strings[1] = String(format: "\"%@\" = \"%@\";", newKey, try newAes.encrypt(value))
             } else {
                 strings[1] = String(format: "\"%@\" = \"%@\";", key, value)
             }
@@ -163,17 +168,16 @@ func handleStringsFile(_ file: [DirectoryPath], toXLSX newPath: FilePath, isDocu
                 continue
             }
             let cache = try handleStringLines(filePath, isDocumentOrigin: isDocumentOrigin, includePrefix: includePrefix)
-            for (key, values) in cache {
-                var keyCache = retCache[key] ?? [:]
-                keyCache[pathName] = values
-                retCache[key] = keyCache
-            }
+            retCache[pathName] = cache
         }
     }
-//    
+    
 //    guard let xlxsFile = XLSXFile(filepath: newPath.path) else {
-//        
+//        print("create xlxs file failed")
+//        return
 //    }
+    
+    
 }
 
 // MARK: - cammand
@@ -244,9 +248,73 @@ let cammand0 = command { (values: [String], parser: ArgumentParser) in
             output = outputDir
         }
         
-        try handlePlistToStrings(path, name: name, output: output, includePrefix: "gy_")
+        try handlePlistToStrings(path, name: name, output: output, includePrefix: "gy_", replacePrefix: "dcr_")
+    } else if parser.hasOption("sx") {
+        let files = values.map({ Path.instanceOfPath($0) })
+            .filter({ $0 != nil && $0!.isDirectory && $0!.pathExtension == "lproj" })
+            .map({ $0 as! DirectoryPath })
+        var output: FilePath = DirectoryPath.current.appendFileName("Strings.plist") as! FilePath
+        if parser.hasOption("output"),
+           let filePath = values.last
+        {
+            output = FilePath(path: filePath)
+            try output.createIfNotExists()
+        }
+        
+        var isDocumentOrigin: Bool = false
+        if parser.hasOption("ido") {
+            isDocumentOrigin = true
+        }
+        
+        try handleStringsFile(files, output: .xlsx, toPath: output, isDocumentOrigin: isDocumentOrigin, includePrefix: "gy_")
+    } else if parser.hasOption("zip") {
+        let dir = values[0]
+        let passwrod = values[1]
+        let path = Path.instanceOfPath(dir) as! DirectoryPath
+        let newPath = path.parent.appendFileName(path.lastPathConponent, ext: "zip")
+        if SSZipArchive.createZipFile(atPath: newPath.path, withContentsOfDirectory: dir, withPassword: passwrod) {
+            print("create success")
+        }
+    } else if parser.hasOption("rp"), let path = values.first {
+        let data = try Data(contentsOf: URL(fileURLWithPath: path))
+        let dict = try PropertyListDecoder().decode([String: String].self, from: data)
+        let decryptDict = try dict.mapValues({ try aes.decrypt($0) })
+        let newEncrypt = try decryptDict.map({
+            var key = $0.key
+            if !key.hasPrefix("dcr_") {
+                key = String(format: "dcr_%@", key)
+            }
+            let value = try newAes.encrypt($0.value!)
+            return (key, value)
+        })
+        
+        var newEncryptDict: [String: String] = [:]
+        newEncrypt.forEach({ newEncryptDict[$0.0] = $0.1 })
+        let oldPath = FilePath(path: path)
+        try oldPath.remove()
+        let newData = try PropertyListEncoder().encode(newEncryptDict)
+        try oldPath.writeData(newData)
     }
 }
 
 cammand0.run()
 
+//print(try aes.decrypt("lKaTLKDZUsiRz5cMO8+bdJPzK6udGbh8gpHpeegUarPkh5UFi3M4bwR4Qi6cI2tw7NO+mtBMy6ILct6GvtldXg==")!)
+//print(try aes.decrypt("uPBSQaVlwQTPS3108xOoAgTumr4v9fKxUm8o5H8BEIA=")!)
+//print(try aes.decrypt("uPBSQaVlwQTPS3108xOoAldrBsMqMRJxuCLEOiqdxlo=")!)
+//print(try aes.decrypt("yaLs1TtH1crnyjppPWk7XQ==")!)
+//print(try aes.decrypt("KUaY6XbsaVePebcZXNkY9w==")!)
+//print(try newAes.encrypt("https://s3.amazonaws.com/ns.livegirl.me/wdevent/cs/cs.html"))
+//print(try newAes.encrypt("kAgoraMessage_HostFuzzy"))
+//print(try newAes.encrypt("kAgoraMessage_HostFuzzy_No"))
+//print(try newAes.encrypt("1"))
+//print(try newAes.encrypt("00"))
+//let cryptCammand = command { (values: [String], parser: ArgumentParser) in
+//    if parser.hasOption("d") {
+//        try print(values.map({ try newAes.decrypt($0)! }).joined(separator: "\n"))
+//    } else if parser.hasOption("e") {
+//        try print(values.map({ try newAes.encrypt($0) }).joined(separator: "\n"))
+//    }
+//}
+//
+//cryptCammand.run()

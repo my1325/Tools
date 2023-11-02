@@ -54,11 +54,31 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "--ps /Users/mayong/Desktop/Localizable.plist --output /Users/mayong/Desktop"
-            isEnabled = "YES">
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--d p2W5jvR1q5EDT5aO0UDcmtHU9bO8WN+4/6J4Q86lzQQ=  iqgZ4pVsTfQkvICx5Nz01g==  jT6LJfLzIqt18TDRREzh6lnZTHBN6EYjntl8LcYoVS8="
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--rp /Users/mayong/Desktop/wudi/Kawa_Mikko/Kawa/DCR_Main/Resources/Const/system_api.plist"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--e &quot;asdfjklasjdlfkasdf&quot; &quot;asdflkajsdlfasd&quot; &quot;asdfjalksdflasdf&quot;"
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--sp /Users/mayong/Desktop/cache/en.lproj /Users/mayong/Desktop/cache/ar.lproj /Users/mayong/Desktop/cache/tr.lproj --output /Users/mayong/Desktop/Localizable.plist --ido"
             isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--sx /Users/mayong/Desktop/cache/en.lproj /Users/mayong/Desktop/cache/ar.lproj /Users/mayong/Desktop/cache/tr.lproj --output /Users/mayong/Desktop/Localizable.xlsx --ido"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--zip /Users/mayong/Desktop/wudi/Kawa_Mikko/Kawa/DCRMCKit/assets/MultiBeamResource 12346"
+            isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>

@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "corexlsx",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/CoreOffice/CoreXLSX.git",
-      "state" : {
-        "revision" : "1391f3832ea2eeee5186ea8abb81ea49ed0609cc",
-        "version" : "0.14.2"
-      }
-    },
-    {
       "identity" : "cryptoswift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/krzyzanowskim/CryptoSwift.git",
@@ -37,6 +28,15 @@
       }
     },
     {
+      "identity" : "skphotobrowser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/suzuki-0000/SKPhotoBrowser.git",
+      "state" : {
+        "revision" : "f9d8589310ad935270c2b24b3f97c5a89970aff5",
+        "version" : "7.1.0"
+      }
+    },
+    {
       "identity" : "spectre",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kylef/Spectre.git",
@@ -46,21 +46,21 @@
       }
     },
     {
-      "identity" : "xmlcoder",
+      "identity" : "swiftxlsx",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/maxdesiatov/XMLCoder.git",
+      "location" : "https://github.com/3973770/SwiftXLSX.git",
       "state" : {
-        "revision" : "ca932442d7481700f5434a7b138c47dd42d9902b",
-        "version" : "0.14.0"
+        "revision" : "f2604c774dd55afd8c2b6f50e40cf204ea32fe11",
+        "version" : "0.1.4"
       }
     },
     {
-      "identity" : "zipfoundation",
+      "identity" : "ziparchive",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/weichsel/ZIPFoundation.git",
+      "location" : "https://github.com/ZipArchive/ZipArchive.git",
       "state" : {
-        "revision" : "a3f5c2bae0f04b0bce9ef3c4ba6bd1031a0564c4",
-        "version" : "0.9.17"
+        "revision" : "79d4dc9729096c6ad83dd3cee2b9f354d1b4ab7b",
+        "version" : "2.5.5"
       }
     }
   ],
