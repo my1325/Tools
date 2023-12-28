@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B757D2F8298B8C3200229388 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757D2F7298B8C3200229388 /* main.swift */; };
 		B757D300298B8D5000229388 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B757D2FF298B8D5000229388 /* CryptoSwift */; };
+		B7844C5B2B3BC4690069B12B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7844C5A2B3BC4690069B12B /* Cocoa.framework */; };
 		B7D2B3FF2AE7549C00380FC2 /* SwiftXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = B7D2B3FE2AE7549C00380FC2 /* SwiftXLSX */; };
 		B7DCF39C2ADE6CB60032952A /* FilePath in Frameworks */ = {isa = PBXBuildFile; productRef = B7DCF39B2ADE6CB60032952A /* FilePath */; };
 		B7DCF39F2ADE6D150032952A /* Commander in Frameworks */ = {isa = PBXBuildFile; productRef = B7DCF39E2ADE6D150032952A /* Commander */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		B757D2F4298B8C3200229388 /* Tools */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tools; sourceTree = BUILT_PRODUCTS_DIR; };
 		B757D2F7298B8C3200229388 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B7844C5A2B3BC4690069B12B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B7DCF3A02ADE6D830032952A /* AESCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESCoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7844C5B2B3BC4690069B12B /* Cocoa.framework in Frameworks */,
 				B757D300298B8D5000229388 /* CryptoSwift in Frameworks */,
 				B7D2B3FF2AE7549C00380FC2 /* SwiftXLSX in Frameworks */,
 				B7DCF39F2ADE6D150032952A /* Commander in Frameworks */,
@@ -53,6 +56,7 @@
 			children = (
 				B757D2F6298B8C3200229388 /* Tools */,
 				B757D2F5298B8C3200229388 /* Products */,
+				B7844C592B3BC4690069B12B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +75,14 @@
 				B7DCF3A02ADE6D830032952A /* AESCoder.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		B7844C592B3BC4690069B12B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7844C5A2B3BC4690069B12B /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

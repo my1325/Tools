@@ -57,6 +57,14 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "--mp /Users/mayong/Desktop/wudi/LiveKitSwift/BF_LiveKitSwift/Resources/BF_Live.xcassets /Users/mayong/Desktop/wudi/LiveKitSwift/BF_LiveKitSwift/Resources/images"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--alignAssets /Users/mayong/Desktop/wudi/Movie/DCRMovie/Kawa/Assets.xcassets"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "--d p2W5jvR1q5EDT5aO0UDcmtHU9bO8WN+4/6J4Q86lzQQ=  iqgZ4pVsTfQkvICx5Nz01g==  jT6LJfLzIqt18TDRREzh6lnZTHBN6EYjntl8LcYoVS8="
             isEnabled = "NO">
          </CommandLineArgument>
@@ -77,7 +85,15 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--zip /Users/mayong/Desktop/wudi/Kawa_Mikko/Kawa/DCRMCKit/assets/MultiBeamResource 12346"
+            argument = "--zip  /Users/mayong/Desktop/wudi/Movie/DCRMovie/Kawa/DCRLiveKit/assets/DCRLive_Resources 12346"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--mv "
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--rcf /Users/mayong/Desktop/wudi/LiveKitSwift/BF_LiveKitSwift/Resources/BF_Resources/tr.lproj/bf_live.strings"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
