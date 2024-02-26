@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7273C3B2B4E3B2700CEE211 /* AssetsTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7273C3A2B4E3B2700CEE211 /* AssetsTool.swift */; };
+		B7273C3F2B4E403D00CEE211 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = B7273C3E2B4E403D00CEE211 /* ZipArchive */; };
+		B7273C482B4E40F800CEE211 /* Commander in Frameworks */ = {isa = PBXBuildFile; productRef = B7273C472B4E40F800CEE211 /* Commander */; };
+		B72B68372B888F2A0002DD8C /* FilesTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B68362B888F2A0002DD8C /* FilesTool.swift */; };
 		B757D2F8298B8C3200229388 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757D2F7298B8C3200229388 /* main.swift */; };
-		B757D300298B8D5000229388 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B757D2FF298B8D5000229388 /* CryptoSwift */; };
+		B766C7AA2B8C2553008D1D81 /* ImageFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766C7A92B8C2553008D1D81 /* ImageFileBuilder.swift */; };
+		B766C7AD2B8C2648008D1D81 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = B766C7AC2B8C2648008D1D81 /* Yams */; };
+		B766C7B12B8C2760008D1D81 /* DefaultCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766C7B02B8C2760008D1D81 /* DefaultCodable.swift */; };
+		B766C7B32B8C2C1B008D1D81 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766C7B22B8C2C1B008D1D81 /* String+Extensions.swift */; };
+		B766C7B62B8C2EE6008D1D81 /* PathKit in Frameworks */ = {isa = PBXBuildFile; productRef = B766C7B52B8C2EE6008D1D81 /* PathKit */; };
+		B766C7B82B8C319D008D1D81 /* PathKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766C7B72B8C319D008D1D81 /* PathKit+Extensions.swift */; };
+		B766C7BF2B8C55C6008D1D81 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766C7BE2B8C55C6008D1D81 /* Array+Extensions.swift */; };
 		B7844C5B2B3BC4690069B12B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7844C5A2B3BC4690069B12B /* Cocoa.framework */; };
-		B7D2B3FF2AE7549C00380FC2 /* SwiftXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = B7D2B3FE2AE7549C00380FC2 /* SwiftXLSX */; };
-		B7DCF39C2ADE6CB60032952A /* FilePath in Frameworks */ = {isa = PBXBuildFile; productRef = B7DCF39B2ADE6CB60032952A /* FilePath */; };
-		B7DCF39F2ADE6D150032952A /* Commander in Frameworks */ = {isa = PBXBuildFile; productRef = B7DCF39E2ADE6D150032952A /* Commander */; };
-		B7DCF3A12ADE6D830032952A /* AESCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DCF3A02ADE6D830032952A /* AESCoder.swift */; };
+		B7B972BB2B8359DC00EBC958 /* ImagesetRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B972BA2B8359DC00EBC958 /* ImagesetRenamer.swift */; };
+		B7FAE9BB2B8438CB00B4FDAE /* Imageset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FAE9BA2B8438CB00B4FDAE /* Imageset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +37,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B757D2F4298B8C3200229388 /* Tools */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tools; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7273C3A2B4E3B2700CEE211 /* AssetsTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsTool.swift; sourceTree = "<group>"; };
+		B72B68362B888F2A0002DD8C /* FilesTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesTool.swift; sourceTree = "<group>"; };
+		B757D2F4298B8C3200229388 /* ToolBox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ToolBox; sourceTree = BUILT_PRODUCTS_DIR; };
 		B757D2F7298B8C3200229388 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B766C7A92B8C2553008D1D81 /* ImageFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileBuilder.swift; sourceTree = "<group>"; };
+		B766C7B02B8C2760008D1D81 /* DefaultCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCodable.swift; sourceTree = "<group>"; };
+		B766C7B22B8C2C1B008D1D81 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B766C7B72B8C319D008D1D81 /* PathKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PathKit+Extensions.swift"; sourceTree = "<group>"; };
+		B766C7BE2B8C55C6008D1D81 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		B7844C5A2B3BC4690069B12B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		B7DCF3A02ADE6D830032952A /* AESCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESCoder.swift; sourceTree = "<group>"; };
+		B7B972BA2B8359DC00EBC958 /* ImagesetRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesetRenamer.swift; sourceTree = "<group>"; };
+		B7FAE9BA2B8438CB00B4FDAE /* Imageset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imageset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,16 +57,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7844C5B2B3BC4690069B12B /* Cocoa.framework in Frameworks */,
-				B757D300298B8D5000229388 /* CryptoSwift in Frameworks */,
-				B7D2B3FF2AE7549C00380FC2 /* SwiftXLSX in Frameworks */,
-				B7DCF39F2ADE6D150032952A /* Commander in Frameworks */,
-				B7DCF39C2ADE6CB60032952A /* FilePath in Frameworks */,
+				B7273C3F2B4E403D00CEE211 /* ZipArchive in Frameworks */,
+				B766C7B62B8C2EE6008D1D81 /* PathKit in Frameworks */,
+				B766C7AD2B8C2648008D1D81 /* Yams in Frameworks */,
+				B7273C482B4E40F800CEE211 /* Commander in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7273C3C2B4E3B5F00CEE211 /* AssetsTool */ = {
+			isa = PBXGroup;
+			children = (
+				B7273C3A2B4E3B2700CEE211 /* AssetsTool.swift */,
+				B7B972BA2B8359DC00EBC958 /* ImagesetRenamer.swift */,
+				B7FAE9BA2B8438CB00B4FDAE /* Imageset.swift */,
+			);
+			path = AssetsTool;
+			sourceTree = "<group>";
+		};
+		B72B68352B888D450002DD8C /* FilesTool */ = {
+			isa = PBXGroup;
+			children = (
+				B72B68362B888F2A0002DD8C /* FilesTool.swift */,
+				B766C7A92B8C2553008D1D81 /* ImageFileBuilder.swift */,
+			);
+			path = FilesTool;
+			sourceTree = "<group>";
+		};
 		B757D2EB298B8C3200229388 = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +98,7 @@
 		B757D2F5298B8C3200229388 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B757D2F4298B8C3200229388 /* Tools */,
+				B757D2F4298B8C3200229388 /* ToolBox */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,10 +106,23 @@
 		B757D2F6298B8C3200229388 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B766C7AF2B8C2752008D1D81 /* Common */,
 				B757D2F7298B8C3200229388 /* main.swift */,
-				B7DCF3A02ADE6D830032952A /* AESCoder.swift */,
+				B72B68352B888D450002DD8C /* FilesTool */,
+				B7273C3C2B4E3B5F00CEE211 /* AssetsTool */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		B766C7AF2B8C2752008D1D81 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B766C7B02B8C2760008D1D81 /* DefaultCodable.swift */,
+				B766C7B22B8C2C1B008D1D81 /* String+Extensions.swift */,
+				B766C7B72B8C319D008D1D81 /* PathKit+Extensions.swift */,
+				B766C7BE2B8C55C6008D1D81 /* Array+Extensions.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		B7844C592B3BC4690069B12B /* Frameworks */ = {
@@ -88,9 +136,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B757D2F3298B8C3200229388 /* Tools */ = {
+		B757D2F3298B8C3200229388 /* ToolBox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B757D2FB298B8C3200229388 /* Build configuration list for PBXNativeTarget "Tools" */;
+			buildConfigurationList = B757D2FB298B8C3200229388 /* Build configuration list for PBXNativeTarget "ToolBox" */;
 			buildPhases = (
 				B757D2F0298B8C3200229388 /* Sources */,
 				B757D2F1298B8C3200229388 /* Frameworks */,
@@ -100,15 +148,15 @@
 			);
 			dependencies = (
 			);
-			name = Tools;
+			name = ToolBox;
 			packageProductDependencies = (
-				B757D2FF298B8D5000229388 /* CryptoSwift */,
-				B7DCF39B2ADE6CB60032952A /* FilePath */,
-				B7DCF39E2ADE6D150032952A /* Commander */,
-				B7D2B3FE2AE7549C00380FC2 /* SwiftXLSX */,
+				B7273C3E2B4E403D00CEE211 /* ZipArchive */,
+				B7273C472B4E40F800CEE211 /* Commander */,
+				B766C7AC2B8C2648008D1D81 /* Yams */,
+				B766C7B52B8C2EE6008D1D81 /* PathKit */,
 			);
 			productName = Tools;
-			productReference = B757D2F4298B8C3200229388 /* Tools */;
+			productReference = B757D2F4298B8C3200229388 /* ToolBox */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -126,7 +174,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B757D2EF298B8C3200229388 /* Build configuration list for PBXProject "Tools" */;
+			buildConfigurationList = B757D2EF298B8C3200229388 /* Build configuration list for PBXProject "ToolBox" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,16 +184,17 @@
 			);
 			mainGroup = B757D2EB298B8C3200229388;
 			packageReferences = (
-				B757D2FE298B8D5000229388 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
-				B7DCF39A2ADE6CB60032952A /* XCRemoteSwiftPackageReference "FilePath" */,
-				B7DCF39D2ADE6D150032952A /* XCRemoteSwiftPackageReference "Commander" */,
-				B7D2B3FD2AE7549C00380FC2 /* XCRemoteSwiftPackageReference "SwiftXLSX" */,
+				B7273C3D2B4E403D00CEE211 /* XCRemoteSwiftPackageReference "ZipArchive" */,
+				B7273C462B4E40F800CEE211 /* XCRemoteSwiftPackageReference "Commander" */,
+				B7C3AABE2B4E8F6100D236EF /* XCRemoteSwiftPackageReference "AppleSwiftMacros" */,
+				B766C7AB2B8C2648008D1D81 /* XCRemoteSwiftPackageReference "Yams" */,
+				B766C7B42B8C2EE6008D1D81 /* XCRemoteSwiftPackageReference "PathKit" */,
 			);
 			productRefGroup = B757D2F5298B8C3200229388 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B757D2F3298B8C3200229388 /* Tools */,
+				B757D2F3298B8C3200229388 /* ToolBox */,
 			);
 		};
 /* End PBXProject section */
@@ -155,8 +204,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B766C7B12B8C2760008D1D81 /* DefaultCodable.swift in Sources */,
+				B766C7BF2B8C55C6008D1D81 /* Array+Extensions.swift in Sources */,
+				B7FAE9BB2B8438CB00B4FDAE /* Imageset.swift in Sources */,
+				B7273C3B2B4E3B2700CEE211 /* AssetsTool.swift in Sources */,
+				B72B68372B888F2A0002DD8C /* FilesTool.swift in Sources */,
+				B766C7AA2B8C2553008D1D81 /* ImageFileBuilder.swift in Sources */,
+				B766C7B82B8C319D008D1D81 /* PathKit+Extensions.swift in Sources */,
+				B766C7B32B8C2C1B008D1D81 /* String+Extensions.swift in Sources */,
 				B757D2F8298B8C3200229388 /* main.swift in Sources */,
-				B7DCF3A12ADE6D830032952A /* AESCoder.swift in Sources */,
+				B7B972BB2B8359DC00EBC958 /* ImagesetRenamer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -290,7 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -299,7 +356,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B757D2EF298B8C3200229388 /* Build configuration list for PBXProject "Tools" */ = {
+		B757D2EF298B8C3200229388 /* Build configuration list for PBXProject "ToolBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B757D2F9298B8C3200229388 /* Debug */,
@@ -308,7 +365,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B757D2FB298B8C3200229388 /* Build configuration list for PBXNativeTarget "Tools" */ = {
+		B757D2FB298B8C3200229388 /* Build configuration list for PBXNativeTarget "ToolBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B757D2FC298B8C3200229388 /* Debug */,
@@ -320,31 +377,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B757D2FE298B8D5000229388 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+		B7273C3D2B4E403D00CEE211 /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			repositoryURL = "https://github.com/ZipArchive/ZipArchive.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 2.5.5;
 			};
 		};
-		B7D2B3FD2AE7549C00380FC2 /* XCRemoteSwiftPackageReference "SwiftXLSX" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/3973770/SwiftXLSX.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
-			};
-		};
-		B7DCF39A2ADE6CB60032952A /* XCRemoteSwiftPackageReference "FilePath" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/my1325/FilePath.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		B7DCF39D2ADE6D150032952A /* XCRemoteSwiftPackageReference "Commander" */ = {
+		B7273C462B4E40F800CEE211 /* XCRemoteSwiftPackageReference "Commander" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kylef/Commander.git";
 			requirement = {
@@ -352,28 +393,52 @@
 				minimumVersion = 0.9.2;
 			};
 		};
+		B766C7AB2B8C2648008D1D81 /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.6;
+			};
+		};
+		B766C7B42B8C2EE6008D1D81 /* XCRemoteSwiftPackageReference "PathKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kylef/PathKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+		B7C3AABE2B4E8F6100D236EF /* XCRemoteSwiftPackageReference "AppleSwiftMacros" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/my1325/AppleSwiftMacros.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B757D2FF298B8D5000229388 /* CryptoSwift */ = {
+		B7273C3E2B4E403D00CEE211 /* ZipArchive */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B757D2FE298B8D5000229388 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
-			productName = CryptoSwift;
+			package = B7273C3D2B4E403D00CEE211 /* XCRemoteSwiftPackageReference "ZipArchive" */;
+			productName = ZipArchive;
 		};
-		B7D2B3FE2AE7549C00380FC2 /* SwiftXLSX */ = {
+		B7273C472B4E40F800CEE211 /* Commander */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B7D2B3FD2AE7549C00380FC2 /* XCRemoteSwiftPackageReference "SwiftXLSX" */;
-			productName = SwiftXLSX;
-		};
-		B7DCF39B2ADE6CB60032952A /* FilePath */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7DCF39A2ADE6CB60032952A /* XCRemoteSwiftPackageReference "FilePath" */;
-			productName = FilePath;
-		};
-		B7DCF39E2ADE6D150032952A /* Commander */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B7DCF39D2ADE6D150032952A /* XCRemoteSwiftPackageReference "Commander" */;
+			package = B7273C462B4E40F800CEE211 /* XCRemoteSwiftPackageReference "Commander" */;
 			productName = Commander;
+		};
+		B766C7AC2B8C2648008D1D81 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B766C7AB2B8C2648008D1D81 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+		B766C7B52B8C2EE6008D1D81 /* PathKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B766C7B42B8C2EE6008D1D81 /* XCRemoteSwiftPackageReference "PathKit" */;
+			productName = PathKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

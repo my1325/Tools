@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B757D2F3298B8C3200229388"
-               BuildableName = "Tools"
-               BlueprintName = "Tools"
-               ReferencedContainer = "container:Tools.xcodeproj">
+               BuildableName = "ToolBox"
+               BlueprintName = "ToolBox"
+               ReferencedContainer = "container:ToolBox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,55 +46,23 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B757D2F3298B8C3200229388"
-            BuildableName = "Tools"
-            BlueprintName = "Tools"
-            ReferencedContainer = "container:Tools.xcodeproj">
+            BuildableName = "ToolBox"
+            BlueprintName = "ToolBox"
+            ReferencedContainer = "container:ToolBox.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "--ps /Users/mayong/Desktop/Localizable.plist --output /Users/mayong/Desktop"
+            argument = "assets /Users/mayong/Desktop/wudi/JKNote/JokyNote/JokyNote/Assets.xcassets "
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--mp /Users/mayong/Desktop/wudi/LiveKitSwift/BF_LiveKitSwift/Resources/BF_Live.xcassets /Users/mayong/Desktop/wudi/LiveKitSwift/BF_LiveKitSwift/Resources/images"
+            argument = "files /Users/mayong/Desktop/wudi/JKNote/JokyNote/JokyNote/Assets.xcassets /Users/mayong/Desktop/wudi/JKNote/JokyNote/JokyNote/JKN_Images ^.*\.png$"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--alignAssets /Users/mayong/Desktop/wudi/Movie/DCRMovie/Kawa/Assets.xcassets"
+            argument = "refiles /Users/mayong/Desktop/wudi/JKNote/JokyNote/JokyNote/JKN_Images icon_jkn_ icon_nkjy_"
             isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--d p2W5jvR1q5EDT5aO0UDcmtHU9bO8WN+4/6J4Q86lzQQ=  iqgZ4pVsTfQkvICx5Nz01g==  jT6LJfLzIqt18TDRREzh6lnZTHBN6EYjntl8LcYoVS8="
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--rp /Users/mayong/Desktop/wudi/Kawa_Mikko/Kawa/DCR_Main/Resources/Const/system_api.plist"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--e &quot;asdfjklasjdlfkasdf&quot; &quot;asdflkajsdlfasd&quot; &quot;asdfjalksdflasdf&quot;"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--sp /Users/mayong/Desktop/cache/en.lproj /Users/mayong/Desktop/cache/ar.lproj /Users/mayong/Desktop/cache/tr.lproj --output /Users/mayong/Desktop/Localizable.plist --ido"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--sx /Users/mayong/Desktop/cache/en.lproj /Users/mayong/Desktop/cache/ar.lproj /Users/mayong/Desktop/cache/tr.lproj --output /Users/mayong/Desktop/Localizable.xlsx --ido"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--zip  /Users/mayong/Desktop/wudi/Movie/DCRMovie/Kawa/DCRLiveKit/assets/DCRLive_Resources 12346"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--mv "
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--rcf /Users/mayong/Desktop/wudi/LiveKitSwift/BF_LiveKitSwift/Resources/BF_Resources/tr.lproj/bf_live.strings"
-            isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>
@@ -109,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B757D2F3298B8C3200229388"
-            BuildableName = "Tools"
-            BlueprintName = "Tools"
-            ReferencedContainer = "container:Tools.xcodeproj">
+            BuildableName = "ToolBox"
+            BlueprintName = "ToolBox"
+            ReferencedContainer = "container:ToolBox.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
