@@ -105,7 +105,11 @@ internal final class ImageFileBuilder {
         import SwiftUI
         extension SwiftUI.Image {
             init(_ \(config.prefix)file: \(config.prefix.uppercased())\(config.classToken)) {
-                self.init(\(config.prefix)file.\(config.prefix)fileName, bundle: \(config.bundleToken))
+                if let \(config.prefix)uiImage = UIImage(\(config.prefix)file) {
+                    self.init(uiImage: \(config.prefix)uiImage)
+                } else {
+                    self.init(\(config.prefix)file.\(config.prefix)fileName, bundle: \(config.bundleToken))
+                }
             }
         }
         #endif

@@ -8,11 +8,11 @@
 import Foundation
 import PathKit
 import Yams
+import ZipArchive
 
 struct FilesTool {
     let file: Path
     init?(file: Path) {
-        guard file.isDirectory else { return nil }
         self.file = file
     }
     
@@ -25,6 +25,9 @@ struct FilesTool {
         case rename(rpx: String, replacement: String)
         case fileBuilderInit
         case fileBuilderRun
+        case unarchive(destPath: Path, password: String?)
+        case archive(destPath: Path, password: String?)
+        case replace(rpx: String, replacement: String)
     }
     
     func callAsFunction(_ op: Operation) throws {
@@ -37,7 +40,37 @@ struct FilesTool {
             try fileBuilderInit(file)
         case .fileBuilderRun:
             try fileBuilderRun(file)
+        case let .unarchive(destPath, password):
+            try unarchive(destPath, password: password)
+        case let .archive(destPath, password):
+            archive(destPath, password: password)
+        case let .replace(rpx, replacement):
+            try replace(rpx, replacement: replacement)
         }
+    }
+    
+    func replace(_ rpxString: String, replacement: String) throws {
+        let filePath: [Path]
+        if file.isFile { filePath = [file] }
+        else {
+            filePath = try file.recursiveChildren().filter(\.isFile)
+        }
+        
+        let rpx = try NSRegularExpression(pattern: rpxString, options: [])
+        for file in filePath {
+            print("repacing \(file.lastComponent)")
+            let content = NSMutableString(string: try file.read(.utf8))
+            rpx.replaceMatches(in: content, options: .reportCompletion, range: content.range(of: content as String), withTemplate: replacement)
+            try file.write(content as String, encoding: .utf8)
+        }
+    }
+    
+    func unarchive(_ destPath: Path, password: String?) throws {
+        try SSZipArchive.unzipFile(atPath: file.string, toDestination: destPath.string, overwrite: true, password: password)
+    }
+    
+    func archive(_ destPath: Path, password: String?) {
+        SSZipArchive.createZipFile(atPath: destPath.string, withContentsOfDirectory: file.string, withPassword: password)
     }
     
     func rename(_ rpxString: String, replacement: String) throws {

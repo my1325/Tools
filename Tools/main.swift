@@ -35,8 +35,18 @@ import PathKit
 //    }
 //}.run()
 
-let dirPath = "/Users/mayong/Desktop/wudi/JKNote/NKJYPrograme"
+//let dirPath = "/Users/mayong/Desktop/wudi/JKNote/NKJYPrograme"
 
-let filesTool = FilesTool(file: dirPath)
-//try filesTool?(.rename(rpx: "JKN_", replacement: "NKJY_"))
-try filesTool?(.fileBuilderRun)
+//let filesTool = FilesTool(file: dirPath)
+////try filesTool?(.rename(rpx: "JKN_", replacement: "NKJY_"))
+//try filesTool?(.fileBuilderRun)
+
+//let file = "/Users/mayong/Desktop/JKFDHSWCDXSMainWebController.swift"
+//let tool = FilesTool(file: file)
+//try tool?(.replace(rpx: "yyds_", replacement: "bf_"))
+
+let dir = "/Users/mayong/Desktop/wudi/DSTimeline/DSTimeline/assetsFilesBuilder.yaml"
+let assets = "/Users/mayong/Desktop/wudi/DSTimeline/DSTimeline/DSTimeline/Resources/Assets.xcassets"
+let assetsTool = AssetsTool(path: Path(assets))
+try assetsTool?(.buildAssetsStringFile(configPath: dir))
+//try AssetsFileBuilder.install(Path(dir))

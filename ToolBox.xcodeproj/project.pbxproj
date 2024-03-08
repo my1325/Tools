@@ -21,6 +21,7 @@
 		B766C7BF2B8C55C6008D1D81 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766C7BE2B8C55C6008D1D81 /* Array+Extensions.swift */; };
 		B7844C5B2B3BC4690069B12B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7844C5A2B3BC4690069B12B /* Cocoa.framework */; };
 		B7B972BB2B8359DC00EBC958 /* ImagesetRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B972BA2B8359DC00EBC958 /* ImagesetRenamer.swift */; };
+		B7D0C1972B8ED83500E98214 /* AssetsFileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0C1962B8ED83500E98214 /* AssetsFileBuilder.swift */; };
 		B7FAE9BB2B8438CB00B4FDAE /* Imageset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FAE9BA2B8438CB00B4FDAE /* Imageset.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		B766C7BE2B8C55C6008D1D81 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		B7844C5A2B3BC4690069B12B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B7B972BA2B8359DC00EBC958 /* ImagesetRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesetRenamer.swift; sourceTree = "<group>"; };
+		B7D0C1962B8ED83500E98214 /* AssetsFileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsFileBuilder.swift; sourceTree = "<group>"; };
 		B7FAE9BA2B8438CB00B4FDAE /* Imageset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imageset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 				B7273C3A2B4E3B2700CEE211 /* AssetsTool.swift */,
 				B7B972BA2B8359DC00EBC958 /* ImagesetRenamer.swift */,
 				B7FAE9BA2B8438CB00B4FDAE /* Imageset.swift */,
+				B7D0C1962B8ED83500E98214 /* AssetsFileBuilder.swift */,
 			);
 			path = AssetsTool;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				B766C7AA2B8C2553008D1D81 /* ImageFileBuilder.swift in Sources */,
 				B766C7B82B8C319D008D1D81 /* PathKit+Extensions.swift in Sources */,
 				B766C7B32B8C2C1B008D1D81 /* String+Extensions.swift in Sources */,
+				B7D0C1972B8ED83500E98214 /* AssetsFileBuilder.swift in Sources */,
 				B757D2F8298B8C3200229388 /* main.swift in Sources */,
 				B7B972BB2B8359DC00EBC958 /* ImagesetRenamer.swift in Sources */,
 			);
