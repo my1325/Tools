@@ -20,11 +20,16 @@ struct FilesTool {
         self.init(file: Path(file))
     }
     
+    var filesWithOutDirectory: [Path] {
+        get throws {
+            guard file.isDirectory else { return [file] }
+            return try file.recursiveChildren().filter(\.isFile)
+        }
+    }
+    
     enum Operation {
         case extractFiles(destPath: Path, rpx: String)
         case rename(rpx: String, replacement: String)
-        case fileBuilderInit
-        case fileBuilderRun
         case unarchive(destPath: Path, password: String?)
         case archive(destPath: Path, password: String?)
         case replace(rpx: String, replacement: String)
@@ -36,10 +41,6 @@ struct FilesTool {
             try extractFilesToDest(dest, rpxString: rpx)
         case let .rename(rpx, replacement):
             try rename(rpx, replacement: replacement)
-        case .fileBuilderInit:
-            try fileBuilderInit(file)
-        case .fileBuilderRun:
-            try fileBuilderRun(file)
         case let .unarchive(destPath, password):
             try unarchive(destPath, password: password)
         case let .archive(destPath, password):
@@ -49,13 +50,9 @@ struct FilesTool {
         }
     }
     
-    func replace(_ rpxString: String, replacement: String) throws {
-        let filePath: [Path]
-        if file.isFile { filePath = [file] }
-        else {
-            filePath = try file.recursiveChildren().filter(\.isFile)
-        }
-        
+    func replace(_ rpxString: String, replacement: String?) throws {
+        guard let replacement else { return }
+        let filePath: [Path] = try filesWithOutDirectory
         let rpx = try NSRegularExpression(pattern: rpxString, options: [])
         for file in filePath {
             print("repacing \(file.lastComponent)")
@@ -73,8 +70,10 @@ struct FilesTool {
         SSZipArchive.createZipFile(atPath: destPath.string, withContentsOfDirectory: file.string, withPassword: password)
     }
     
-    func rename(_ rpxString: String, replacement: String) throws {
-        let files = try file.recursiveChildren().filter(\.isFile)
+    func rename(_ rpxString: String, replacement: String?) throws {
+        guard let replacement else { return }
+        
+        let files = try filesWithOutDirectory
         let rpx = try NSRegularExpression(pattern: rpxString, options: .caseInsensitive)
         for file in files {
             let filename = file.lastComponent
@@ -85,11 +84,10 @@ struct FilesTool {
         }
     }
     
-    func extractFilesToDest(_ destPath: Path, rpxString: String) throws {
-        let files = try file.recursiveChildren().filter(\.isFile)
+    func extractFilesToDest(_ destPath: Path, rpxString: String?) throws {
+        let files = try filesWithOutDirectory
         var matchFiles: [Path] = files
-        if !rpxString.isEmpty {
-//            let predicate = NSPredicate(format: "SELF MATCHES %@", rpxString)
+        if let rpxString, !rpxString.isEmpty {
             matchFiles = files.filter({ $0.match(rpxString) })
         }
         try matchFiles.forEach {
@@ -97,32 +95,5 @@ struct FilesTool {
             print("coping \($0.lastComponent) to \(dest)")
             try $0.copy(dest)
         }
-    }
-    
-    func fileBuilderInit(_ path: Path) throws {
-        let yamlEncoder = YAMLEncoder()
-        yamlEncoder.options = .init()
-        let initContent = try yamlEncoder.encode(ImageFileBuilderConfig())
-        let pathFile: Path
-        if path.isFile {
-            pathFile = path
-        } else {
-            pathFile = path + "file_builder.yaml"
-        }
-        try pathFile.write(initContent, encoding: .utf8)
-    }
-    
-    func fileBuilderRun(_ path: Path) throws {
-        let pathFile: Path
-        if path.isFile {
-            pathFile = path
-        } else {
-            pathFile = path + "file_builder.yaml"
-        }
-        let yamlData = try pathFile.read()
-        let yamlDecoder = YAMLDecoder(encoding: .utf8)
-        let config = try yamlDecoder.decode(ImageFileBuilderConfig.self, from: yamlData)
-        let builder = ImageFileBuilder(config: config)
-        try builder.build()
     }
 }

@@ -11,9 +11,9 @@ import PathKit
 extension Path {
     @discardableResult
     func rename(_ newName: String) throws -> Path {
+        guard self.lastComponent != newName else { return self }
         let newPath = self.parent() + newName
-        let fileManager = FileManager.default
-        try fileManager.copyItem(atPath: self.string, toPath: newPath.string)
+        try self.copy(newPath)
         return newPath
     }
     

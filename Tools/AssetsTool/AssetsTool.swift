@@ -19,15 +19,12 @@ struct AssetsTool {
     
     enum Operation {
         case rename(String)
-        case buildAssetsStringFile(configPath: String)
     }
     
     func callAsFunction(_ op: Operation) throws {
         switch op {
         case let .rename(newName):
             try resolveImagesetsName(newName)
-        case let .buildAssetsStringFile(configPath):
-            try buildAssetsStringFile(configPath)
         }
     }
     
@@ -38,15 +35,6 @@ struct AssetsTool {
             print("renaming \(imageset.file.lastComponent) to \(newName)")
             try renamer(imageset)
         }
-    }
-    
-    func buildAssetsStringFile(_ configPath: String) throws {
-        let path = Path(configPath)
-        let data = try path.read()
-        let yamlDecoder = YAMLDecoder()
-        let config = try yamlDecoder.decode(AssetsFileBuilderConfig.self, from: data)
-        let builder = AssetsFileBuilder(self.path, config: config)
-        try builder.build()
     }
 }
 
