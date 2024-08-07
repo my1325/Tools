@@ -20,6 +20,7 @@
 		B766C7BF2B8C55C6008D1D81 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766C7BE2B8C55C6008D1D81 /* Array+Extensions.swift */; };
 		B7844C5B2B3BC4690069B12B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7844C5A2B3BC4690069B12B /* Cocoa.framework */; };
 		B7B972BB2B8359DC00EBC958 /* ImagesetRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B972BA2B8359DC00EBC958 /* ImagesetRenamer.swift */; };
+		B7CF98E42BF454D200D92B8F /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B7CF98E32BF454D200D92B8F /* CryptoSwift */; };
 		B7FAE9BB2B8438CB00B4FDAE /* Imageset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FAE9BA2B8438CB00B4FDAE /* Imageset.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 				B766C7B62B8C2EE6008D1D81 /* PathKit in Frameworks */,
 				B766C7AD2B8C2648008D1D81 /* Yams in Frameworks */,
 				B7273C482B4E40F800CEE211 /* Commander in Frameworks */,
+				B7CF98E42BF454D200D92B8F /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +153,7 @@
 				B7273C472B4E40F800CEE211 /* Commander */,
 				B766C7AC2B8C2648008D1D81 /* Yams */,
 				B766C7B52B8C2EE6008D1D81 /* PathKit */,
+				B7CF98E32BF454D200D92B8F /* CryptoSwift */,
 			);
 			productName = Tools;
 			productReference = B757D2F4298B8C3200229388 /* ToolBox */;
@@ -183,9 +186,9 @@
 			packageReferences = (
 				B7273C3D2B4E403D00CEE211 /* XCRemoteSwiftPackageReference "ZipArchive" */,
 				B7273C462B4E40F800CEE211 /* XCRemoteSwiftPackageReference "Commander" */,
-				B7C3AABE2B4E8F6100D236EF /* XCRemoteSwiftPackageReference "AppleSwiftMacros" */,
 				B766C7AB2B8C2648008D1D81 /* XCRemoteSwiftPackageReference "Yams" */,
 				B766C7B42B8C2EE6008D1D81 /* XCRemoteSwiftPackageReference "PathKit" */,
+				B7CF98E22BF454D200D92B8F /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = B757D2F5298B8C3200229388 /* Products */;
 			projectDirPath = "";
@@ -405,12 +408,12 @@
 				minimumVersion = 1.0.1;
 			};
 		};
-		B7C3AABE2B4E8F6100D236EF /* XCRemoteSwiftPackageReference "AppleSwiftMacros" */ = {
+		B7CF98E22BF454D200D92B8F /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/my1325/AppleSwiftMacros.git";
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -435,6 +438,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B766C7B42B8C2EE6008D1D81 /* XCRemoteSwiftPackageReference "PathKit" */;
 			productName = PathKit;
+		};
+		B7CF98E32BF454D200D92B8F /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7CF98E22BF454D200D92B8F /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

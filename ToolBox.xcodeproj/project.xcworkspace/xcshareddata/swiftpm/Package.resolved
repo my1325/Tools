@@ -1,21 +1,21 @@
 {
   "pins" : [
     {
-      "identity" : "appleswiftmacros",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/my1325/AppleSwiftMacros.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "9d3f4a226dd9a991035ea0741348793d445e1d5c"
-      }
-    },
-    {
       "identity" : "commander",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kylef/Commander.git",
       "state" : {
         "revision" : "4a1f2fb82fb6cef613c4a25d2e38f702e4d812c2",
         "version" : "0.9.2"
+      }
+    },
+    {
+      "identity" : "cryptoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/CryptoSwift.git",
+      "state" : {
+        "revision" : "c9c3df6ab812de32bae61fc0cd1bf6d45170ebf0",
+        "version" : "1.8.2"
       }
     },
     {
@@ -34,15 +34,6 @@
       "state" : {
         "revision" : "26cc5e9ae0947092c7139ef7ba612e34646086c7",
         "version" : "0.10.1"
-      }
-    },
-    {
-      "identity" : "swift-syntax",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-syntax.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "80182245e31944415e2bb5e705bc1f693995f0ae"
       }
     },
     {
