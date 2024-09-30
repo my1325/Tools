@@ -20,6 +20,7 @@
 		B766C7BF2B8C55C6008D1D81 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766C7BE2B8C55C6008D1D81 /* Array+Extensions.swift */; };
 		B7844C5B2B3BC4690069B12B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7844C5A2B3BC4690069B12B /* Cocoa.framework */; };
 		B7B972BB2B8359DC00EBC958 /* ImagesetRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B972BA2B8359DC00EBC958 /* ImagesetRenamer.swift */; };
+		B7BF54432C9ABD5600DE1EAB /* Crypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF54422C9ABD5600DE1EAB /* Crypt.swift */; };
 		B7CF98E42BF454D200D92B8F /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B7CF98E32BF454D200D92B8F /* CryptoSwift */; };
 		B7FAE9BB2B8438CB00B4FDAE /* Imageset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FAE9BA2B8438CB00B4FDAE /* Imageset.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		B766C7BE2B8C55C6008D1D81 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		B7844C5A2B3BC4690069B12B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B7B972BA2B8359DC00EBC958 /* ImagesetRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesetRenamer.swift; sourceTree = "<group>"; };
+		B7BF54422C9ABD5600DE1EAB /* Crypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypt.swift; sourceTree = "<group>"; };
 		B7FAE9BA2B8438CB00B4FDAE /* Imageset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imageset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				B757D2F7298B8C3200229388 /* main.swift */,
 				B72B68352B888D450002DD8C /* FilesTool */,
 				B7273C3C2B4E3B5F00CEE211 /* AssetsTool */,
+				B7BF54422C9ABD5600DE1EAB /* Crypt.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				B7273C3B2B4E3B2700CEE211 /* AssetsTool.swift in Sources */,
 				B72B68372B888F2A0002DD8C /* FilesTool.swift in Sources */,
 				B766C7B82B8C319D008D1D81 /* PathKit+Extensions.swift in Sources */,
+				B7BF54432C9ABD5600DE1EAB /* Crypt.swift in Sources */,
 				B766C7B32B8C2C1B008D1D81 /* String+Extensions.swift in Sources */,
 				B757D2F8298B8C3200229388 /* main.swift in Sources */,
 				B7B972BB2B8359DC00EBC958 /* ImagesetRenamer.swift in Sources */,
