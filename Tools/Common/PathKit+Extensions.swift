@@ -13,7 +13,9 @@ extension Path {
     func rename(_ newName: String) throws -> Path {
         guard self.lastComponent != newName else { return self }
         let newPath = self.parent() + newName
-        try self.copy(newPath)
+        if exists, !newPath.exists {
+            try self.copy(newPath)
+        }
         return newPath
     }
     
