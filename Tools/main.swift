@@ -50,11 +50,22 @@ import PathKit
 // let path = "/Users/mayong/Desktop/wudi/FstWear/FstWear/Main/multibeam/assets/FstWAbcdefMC_MultiBeamResource"
 // let dstkPath = "/Users/mayong/Desktop/wudi/FstWear/FstWear/Main/multibeam/assets/FstWAbcdefMC_MultiBeamResource.zip"
 
-// let path = "/Users/mayong/Desktop/wudi/Lottie/Lottie/Lottie/LiveAbout/LiveSource/assets/MlatBF_Resources"
-// let path = "/Users/mayong/Desktop/wudi/GYLive/files/Ycat_LiveIcon"
-// let dstkPath = "\(path).zip"
-// let fileTool = FilesTool(file: Path(path))
-// fileTool?.archive(Path(dstkPath), password: "bBq.123")
+
+// let path = "/Users/mayong/Desktop/wudi/Yrrats/Yrrats/Yrrats/Yrrats_AppBusiness/TinkApps/assets/YrratsTink_Resources"
+
+
+
+
+
+
+
+//let path = "/Users/mayong/Desktop/wudi/hypee/Hypee/Hypee/Resources/HypeeActivityResources"
+//let path = "/Users/mayong/Desktop/wudi/Tune/Tune/CustomPod/TuneLiveKit/TuneLiveKit/Assets/TLK_Assets"
+let path = "/Users/mayong/Desktop/wudi/luka/Luka/Luka/Sources/Room/BF_Resources"
+let dstkPath = "\(path).zip"
+let fileTool = FilesTool(file: Path(path))
+fileTool?.archive(Path(dstkPath), password: "luka")
+
 
 // func newStringFile(_ file: Path) throws {
 //    let string: String = try file.read()
@@ -81,6 +92,11 @@ import PathKit
 
 import AppKit
 import CryptoSwift
+// 66c616077829b1b5
+// let res = try CCC_Crypt.ccc_AES("d476ed3880711796", ccc_blockMode: .CCC_OFB(ccc_iv: "66c616077829b1b5", ccc_padding: .ccc_noPadding))
+//    .ccc_encrypt("3VQ4TIs0L-iEa-cZIosrUoRFAouBezHiTinx_dyLbeaBcBlw-blTOBkZ-blcT0J1i5zikv2JTdUAqE4prqGD0-")
+//    .ccc_decrypt(Data(base64Encoded: "emsrUA6LdCclFU5tRwsrVxrd+cu1HYE3xmvROFKRMXpyGfgR/QRxX3K75k1dOJ7bxDzd0xSyfLQG5zV8Z7as4HJ+2WgOPNJC0Bx5kd9StFf7rl3PualuDmN7iLWXQpelb2sqbcPQswOzONPXWvxN0hGY7jl6V0/6l0e9KqvjAmqvubBVR2mdAargjkW0F8UruM0AV8Ir1TEnb6D+dSg62fDPhsJFarNSkq+PBWQakULU5yFU5OkIpg==")!)
+// print(res.ccc_base64EncodedString)
 
 // let aes = try AES(key: "qwertyasdf123456", iv: "mnbvcxzlkjhyuiop")
 //
@@ -103,39 +119,86 @@ import CryptoSwift
 // print(newPath)
 // try newPath.write(values)
 
-let data = "123456"
-let keyData = "1111111111111111"
-let ivData = "2222222222222222"
-do {
-    let blockMode: CCC_AESBlockMode = .CCC_CBC(ccc_iv: ivData)
-    let aesCryptor = try CCC_Crypt.ccc_AES(keyData, ccc_blockMode: blockMode)
-    
-    let result = try aesCryptor.ccc_encrypt(data)
-    let base64String = result.ccc_base64EncodedString
-    
-    let dataToDecrypt = Data(base64Encoded: base64String)!
-    let decryptData = try aesCryptor.ccc_decrypt(dataToDecrypt)
-    
-    let decryptString = decryptData.ccc_utf8EncodedString
-    
-    print("\(base64String)  \(decryptString) \(decryptString == "123456")")
-} catch {
-    print(error)
-}
+// let data = "123456"
+// let keyData = "1111111111111111"
+// let ivData = "2222222222222222"
+// do {
+//    let blockMode: CCC_AESBlockMode = .CCC_CBC(ccc_iv: ivData)
+//    let aesCryptor = try CCC_Crypt.ccc_AES(keyData, ccc_blockMode: blockMode)
+//
+//    let result = try aesCryptor.ccc_encrypt(data)
+//    let base64String = result.ccc_base64EncodedString
+//
+//    let dataToDecrypt = Data(base64Encoded: base64String)!
+//    let decryptData = try aesCryptor.ccc_decrypt(dataToDecrypt)
+//
+//    let decryptString = decryptData.ccc_utf8EncodedString
+//
+//    print("\(base64String)  \(decryptString) \(decryptString == "123456")")
+// } catch {
+//    print(error)
+// }
+//
+// do {
+//    let aes = try AES(key: keyData.ccc_byteData, blockMode: CBC(iv: ivData.ccc_byteData), padding: .pkcs7)
+//    let result = try aes.encrypt(data.ccc_byteData)
+//
+//    let base64String = Data(result).base64EncodedString()
+//    let dataToDecrypt = Data(base64Encoded: base64String)!
+//    let decryptData = try aes.decrypt(Array(dataToDecrypt))
+//    let decryptString = String(data: Data(decryptData), encoding: .utf8)
+//
+//    print("\(base64String)  \(decryptString) \(decryptString == "123456")")
+//
+// } catch {
+//    print(error)
+// }
+//
+// print("adfasdfasdf")
 
-do {
-    let aes = try AES(key: keyData.ccc_byteData, blockMode: CBC(iv: ivData.ccc_byteData), padding: .pkcs7)
-    let result = try aes.encrypt(data.ccc_byteData)
-    
-    let base64String = Data(result).base64EncodedString()
-    let dataToDecrypt = Data(base64Encoded: base64String)!
-    let decryptData = try aes.decrypt(Array(dataToDecrypt))
-    let decryptString = String(data: Data(decryptData), encoding: .utf8)
-    
-    print("\(base64String)  \(decryptString) \(decryptString == "123456")")
+// let path: String = "/Users/mayong/Desktop/wudi/Yrrats/Yrrats/LocalPods/TinkApps/assets/YrratsTink_Resources/Const"
+// let keyMapper: (String) -> String = {
+//    $0.replacingOccurrences(of: "fstwabcdef_", with: "yrratstink_")
+// }
+//
+// let keyData = "qwertyasdf123456"
+// let ivData = "mnbvcxzlkjhyuiop"
+// let blockMode: CCC_AESBlockMode = .CCC_CBC(ccc_iv: ivData)
+// let aesCryptor = try CCC_Crypt.ccc_AES(keyData, ccc_blockMode: blockMode)
+//
+// func plistfileHandler(_ plistPath: Path) throws {
+//    let plistData = try plistPath.read()
+//    var format: PropertyListSerialization.PropertyListFormat = .binary
+//    let plist = try PropertyListSerialization.propertyList(
+//        from: plistData,
+//        options: .mutableContainersAndLeaves,
+//        format: &format
+//    ) as? [String: String]
+//
+//    guard let plist else { return }
+//
+//    var newPlist: [String: String] = [:]
+//
+//    for (key, value) in plist {
+//        newPlist[keyMapper(key)] = try aesCryptor.ccc_decrypt(Data(base64Encoded: value)!)
+//            .ccc_utf8EncodedString
+//    }
+//
+//    let newData = try PropertyListSerialization.data(
+//        fromPropertyList: newPlist,
+//        format: format,
+//        options: .bitWidth
+//    )
+//
+//    try plistPath.write(newData)
+// }
+//
+// try plistfileHandler(Path("/Users/mayong/Desktop/wudi/Yrrats/Yrrats/LocalPods/TinkApps/assets/YrratsTink_Resources/Const/system_api.plist"))
+// for file in Path(path) {
+//    try plistfileHandler(file)
+// }
 
-} catch {
-    print(error)
-}
+// let path = Path("/Users/mayong/Desktop/wudi/Espona/Anopse/Anopse/Assets.xcassets")
+// let assetsTool = AssetsTool(path: path)
+// try assetsTool?(.rename(""))
 
-print("adfasdfasdf")
