@@ -50,22 +50,18 @@ import PathKit
 // let path = "/Users/mayong/Desktop/wudi/FstWear/FstWear/Main/multibeam/assets/FstWAbcdefMC_MultiBeamResource"
 // let dstkPath = "/Users/mayong/Desktop/wudi/FstWear/FstWear/Main/multibeam/assets/FstWAbcdefMC_MultiBeamResource.zip"
 
-
 // let path = "/Users/mayong/Desktop/wudi/Yrrats/Yrrats/Yrrats/Yrrats_AppBusiness/TinkApps/assets/YrratsTink_Resources"
 
+// let path = "/Users/mayong/Desktop/wudi/hypee/Hypee/Hypee/Resources/HypeeActivityResources"
+// let path = "/Users/mayong/Desktop/wudi/Tune/Tune/CustomPod/TuneLiveKit/TuneLiveKit/Assets/TLK_Assets"
 
 
 
 
-
-
-//let path = "/Users/mayong/Desktop/wudi/hypee/Hypee/Hypee/Resources/HypeeActivityResources"
-//let path = "/Users/mayong/Desktop/wudi/Tune/Tune/CustomPod/TuneLiveKit/TuneLiveKit/Assets/TLK_Assets"
-let path = "/Users/mayong/Desktop/wudi/luka/Luka/Luka/Sources/Room/BF_Resources"
+let path = "/Users/mayong/Desktop/wudi/VoyaMy/Voya/Voya/VoyaResources"
 let dstkPath = "\(path).zip"
 let fileTool = FilesTool(file: Path(path))
-fileTool?.archive(Path(dstkPath), password: "luka")
-
+fileTool?.archive(Path(dstkPath), password: "voya")
 
 // func newStringFile(_ file: Path) throws {
 //    let string: String = try file.read()
@@ -92,6 +88,7 @@ fileTool?.archive(Path(dstkPath), password: "luka")
 
 import AppKit
 import CryptoSwift
+
 // 66c616077829b1b5
 // let res = try CCC_Crypt.ccc_AES("d476ed3880711796", ccc_blockMode: .CCC_OFB(ccc_iv: "66c616077829b1b5", ccc_padding: .ccc_noPadding))
 //    .ccc_encrypt("3VQ4TIs0L-iEa-cZIosrUoRFAouBezHiTinx_dyLbeaBcBlw-blTOBkZ-blcT0J1i5zikv2JTdUAqE4prqGD0-")
@@ -202,3 +199,63 @@ import CryptoSwift
 // let assetsTool = AssetsTool(path: path)
 // try assetsTool?(.rename(""))
 
+//protocol TestCodingKey: CodingKey {
+//    associatedtype RawValue
+//
+//    var rawValue: RawValue { get }
+//}
+//
+//extension String {
+//    var snakeCased: String {
+//        let s1 = replacingOccurrences(
+//            of: "([a-z0-9])([A-Z])",
+//            with: "$1_$2",
+//            options: .regularExpression
+//        )
+//
+//        let s2 = s1.replacingOccurrences(
+//            of: "([A-Z]+)([A-Z][a-z])",
+//            with: "$1_$2",
+//            options: .regularExpression
+//        )
+//
+//        return s2.lowercased()
+//    }
+//}
+//
+//extension TestCodingKey where Self: RawRepresentable, Self.RawValue == String {
+//    var stringValue: String {
+//        let retValue = rawValue.snakeCased
+//        print("rawValue: \(rawValue) -> stringValue: \(retValue)")
+//        return retValue
+//    }
+//}
+//
+//struct Test: Codable {
+//    let testHelloWorld: String
+//    let helloWorld: String
+//    let fuck: String
+//
+//    enum CodingKeys: String, TestCodingKey {
+//        case testHelloWorld
+//        case helloWorld
+//        case fuck
+//    }
+//}
+//
+//let jsonString = """
+//{
+//    "test_hello_world": "value1",
+//    "hello_world": "value2",
+//    "fuck": "value3"
+//}
+//"""
+//
+//do {
+//    let jsonData = jsonString.data(using: .utf8)!
+//    let decoder = JSONDecoder()
+//    let test = try decoder.decode(Test.self, from: jsonData)
+//    print(test)
+//} catch {
+//    print("Decoding error: \(error)")
+//}
