@@ -51,17 +51,24 @@ import PathKit
 // let dstkPath = "/Users/mayong/Desktop/wudi/FstWear/FstWear/Main/multibeam/assets/FstWAbcdefMC_MultiBeamResource.zip"
 
 // let path = "/Users/mayong/Desktop/wudi/Yrrats/Yrrats/Yrrats/Yrrats_AppBusiness/TinkApps/assets/YrratsTink_Resources"
+///Users/mayong/Desktop/wudi/Hygge/Hygge/Hygge/HyggeResources
+
+///Users/mayong/Desktop/wudi/Bucolic/Bucolic/Bucolic/BucolicTree/BucolicTreeResource
+///Users/mayong/Desktop/wudi/Evol/Evol/Evol/Resource/EvolResources
+
+
+
+
+
+
+
 
 // let path = "/Users/mayong/Desktop/wudi/hypee/Hypee/Hypee/Resources/HypeeActivityResources"
 // let path = "/Users/mayong/Desktop/wudi/Tune/Tune/CustomPod/TuneLiveKit/TuneLiveKit/Assets/TLK_Assets"
-
-
-
-
-let path = "/Users/mayong/Desktop/wudi/VoyaMy/Voya/Voya/VoyaResources"
-let dstkPath = "\(path).zip"
-let fileTool = FilesTool(file: Path(path))
-fileTool?.archive(Path(dstkPath), password: "voya")
+ let path = "/Users/mayong/Desktop/wudi/Krew/Krew/KrewResources"
+ let dstkPath = "\(path).zip"
+ let fileTool = FilesTool(file: Path(path))
+ fileTool?.archive(Path(dstkPath), password: "krew")
 
 // func newStringFile(_ file: Path) throws {
 //    let string: String = try file.read()
@@ -195,17 +202,18 @@ import CryptoSwift
 //    try plistfileHandler(file)
 // }
 
-// let path = Path("/Users/mayong/Desktop/wudi/Espona/Anopse/Anopse/Assets.xcassets")
-// let assetsTool = AssetsTool(path: path)
-// try assetsTool?(.rename(""))
 
-//protocol TestCodingKey: CodingKey {
+//let assetpath = Path("/Users/mayong/Desktop/wudi/Orbit/Orbit/Orbit/Assets.xcassets")
+//let assetsTool = AssetsTool(path: assetpath)
+//try assetsTool?(.replace("trim", "orbit"))
+
+// protocol TestCodingKey: CodingKey {
 //    associatedtype RawValue
 //
 //    var rawValue: RawValue { get }
-//}
+// }
 //
-//extension String {
+// extension String {
 //    var snakeCased: String {
 //        let s1 = replacingOccurrences(
 //            of: "([a-z0-9])([A-Z])",
@@ -221,17 +229,17 @@ import CryptoSwift
 //
 //        return s2.lowercased()
 //    }
-//}
+// }
 //
-//extension TestCodingKey where Self: RawRepresentable, Self.RawValue == String {
+// extension TestCodingKey where Self: RawRepresentable, Self.RawValue == String {
 //    var stringValue: String {
 //        let retValue = rawValue.snakeCased
 //        print("rawValue: \(rawValue) -> stringValue: \(retValue)")
 //        return retValue
 //    }
-//}
+// }
 //
-//struct Test: Codable {
+// struct Test: Codable {
 //    let testHelloWorld: String
 //    let helloWorld: String
 //    let fuck: String
@@ -241,21 +249,21 @@ import CryptoSwift
 //        case helloWorld
 //        case fuck
 //    }
-//}
+// }
 //
-//let jsonString = """
-//{
+// let jsonString = """
+// {
 //    "test_hello_world": "value1",
 //    "hello_world": "value2",
 //    "fuck": "value3"
-//}
-//"""
+// }
+// """
 //
-//do {
+// do {
 //    let jsonData = jsonString.data(using: .utf8)!
 //    let decoder = JSONDecoder()
 //    let test = try decoder.decode(Test.self, from: jsonData)
 //    print(test)
-//} catch {
+// } catch {
 //    print("Decoding error: \(error)")
-//}
+// }
