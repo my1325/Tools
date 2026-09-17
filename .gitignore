@@ -3,3 +3,7 @@ DerivedData/
 #*.xcworkspace
 #*.lock
 xcuserdata/
+
+# Ruby (ExcelToStrings) local gem install
+ExcelToStrings/.bundle/
+ExcelToStrings/vendor/
