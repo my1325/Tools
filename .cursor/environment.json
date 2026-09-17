@@ -1,0 +1,4 @@
+{
+  "name": "ToolBox",
+  "install": "bash .cursor/install.sh"
+}
